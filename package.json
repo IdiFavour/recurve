@@ -1,0 +1,60 @@
+{
+  "name": "@idifavour/recurve",
+  "version": "0.1.0",
+  "description": "Stateless recurring subscription billing for Paystack — retries/dunning, proration, lifecycle tracking, webhook verification, and saved-card charging. You own the storage.",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "idifavour",
+  "homepage": "https://github.com/idifavour/recurve#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idifavour/recurve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idifavour/recurve/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "release": "npm run build && changeset publish"
+  },
+  "keywords": [
+    "paystack",
+    "billing",
+    "subscriptions",
+    "dunning",
+    "proration",
+    "webhooks",
+    "stateless"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.27.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
