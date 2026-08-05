@@ -5,13 +5,13 @@
   "type": "module",
   "license": "SEE LICENSE IN LICENSE",
   "author": "idifavour",
-  "homepage": "https://github.com/idifavour/recurve#readme",
+  "homepage": "https://github.com/IdiFavour/recurve#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idifavour/recurve.git"
+    "url": "git+https://github.com/IdiFavour/recurve.git"
   },
   "bugs": {
-    "url": "https://github.com/idifavour/recurve/issues"
+    "url": "https://github.com/IdiFavour/recurve/issues"
   },
   "publishConfig": {
     "access": "public",
